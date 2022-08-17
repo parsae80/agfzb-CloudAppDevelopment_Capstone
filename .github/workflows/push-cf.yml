@@ -7,7 +7,7 @@ env:
   IBM_CLOUD_REGION: us-south
   IBM_CLOUD_GROUP: default
   IBM_CLOUD_SPACE: dev
-  IBM_CLOUD_ORG: parsae1380@gmail.com
+  IBM_CLOUD_ORG: parsae@mybluemix.net
   MANIFEST_NAME: manifest.yml
   IBM_CLOUD_API: _d4Kp3e70J7B1WVlRmI_aqjQmmfjXX0-pox6YNkt_diD
 
