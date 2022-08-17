@@ -9,7 +9,7 @@ env:
   IBM_CLOUD_SPACE: dev
   IBM_CLOUD_ORG: parsae1380@gmail.com
   MANIFEST_NAME: manifest.yml
-  IBM_CLOUD_API: ${{_d4Kp3e70J7B1WVlRmI_aqjQmmfjXX0-pox6YNkt_diD}}
+  IBM_CLOUD_API: _d4Kp3e70J7B1WVlRmI_aqjQmmfjXX0-pox6YNkt_diD
 
 defaults:
   run:
