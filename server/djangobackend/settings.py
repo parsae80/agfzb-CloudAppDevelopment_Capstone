@@ -27,7 +27,7 @@ DEBUG = True
 
 APPEND_SLASH = True
 
-ALLOWED_HOSTS = ["localhost","parsae"]
+ALLOWED_HOSTS = ["localhost","parsae","parsae.mybluemix.net"]
 
 
 # Application definition
