@@ -2,8 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, render, redirect
-from .models import carModel
-# from .restapis import related methods
+from .models import CarModel, CarMake, CarDealer, DealerReview
+from .restapis import  get_dealers_from_cf, get_dealer_reviews_from_cf, post_request
+
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from datetime import datetime
@@ -104,7 +105,7 @@ def get_dealer_details(request, dealer_id):
 
 # Create a `add_review` view to submit a review
 def add_review(request, dealer_id):
-     if request.user.is_authenticated:
+    if request.user.is_authenticated:
         # GET request renders the page with the form for filling out a review
         if request.method == "GET":
             url = "https://9130179c.us-south.apigw.appdomain.cloud/api/getdealerships"
@@ -153,7 +154,6 @@ def add_review(request, dealer_id):
 
             # After posting the review the user is redirected back to the dealer details page
             return redirect("djangoapp:dealer_details", dealer_id=dealer_id)
-
     else:
         # If user isn't logged in, redirect to login page
         print("User must be authenticated before posting a review. Please log in.")
